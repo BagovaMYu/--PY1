@@ -19,13 +19,13 @@ main_str = """
 print(get_count_char(main_str))
 
 
-char_dict_percent = get_count_char(main_str)
+main_char_dict = get_count_char(main_str)
 
 def get_percent(char_dict):
     total_char = sum(char_dict.values())
     for current_char in char_dict:
-        char_dict[current_char] = char_dict[current_char] * 100 / total_char
+        char_dict[current_char] = round((char_dict[current_char] * 100 / total_char), 2)
 
     return char_dict
 
-#print(get_percent(char_dict_percent))
+#print(get_percent(main_char_dict))
